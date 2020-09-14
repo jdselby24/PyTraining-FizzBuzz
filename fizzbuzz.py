@@ -1,5 +1,8 @@
-for x in range(101):
+import re
+
+for x in range(500):
     output = ""
+    storeArray = []
     if(x % 11 == 0):
         print("Bong")
         continue
@@ -11,6 +14,11 @@ for x in range(101):
         output += "Buzz"
     if(x % 7 == 0):
         output += "Bang"
+    if(x % 17 == 0):
+        storeArray = re.findall('[A-Z][^A-Z]*', output)
+        storeArray.reverse()
+        output = ''.join(storeArray)
     if(output == ""):
         print(x)
-    print(output)
+    else:
+        print(output)
