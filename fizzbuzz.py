@@ -1,6 +1,8 @@
 import re
 
-for x in range(500):
+maxNum = input("Please enter a maximum number:")
+
+for x in range(maxNum):
     output = ""
     storeArray = []
     if(x % 11 == 0):
