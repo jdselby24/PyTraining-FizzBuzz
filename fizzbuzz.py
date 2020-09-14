@@ -21,7 +21,7 @@ for x in range(maxNum):
     if(x % 7 == 0) & ('7' not in sys.argv):
         output += "Bang"
     if(x % 17 == 0) & ('17' not in sys.argv):
-        # regex matches all strings starting with capital letters and splits them into list elements
+        # regex matches all substrings starting with capital letters and splits them into list elements
         storeArray = re.findall('[A-Z][^A-Z]*', output)
         storeArray.reverse()
         output = ''.join(storeArray)
